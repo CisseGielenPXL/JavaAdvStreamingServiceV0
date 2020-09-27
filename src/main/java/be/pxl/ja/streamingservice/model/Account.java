@@ -9,6 +9,11 @@ public class Account {
     private StreamingPlan streamingPlan;
     private List<Profile> profiles;
 
+    public Account(String email, String password){
+        Profile profile = new Profile();
+        profile.setName("profile1");
+        profiles.add(profile);
+    }
     public String getEmail() {
         return email;
     }
@@ -23,5 +28,8 @@ public class Account {
 
     public void setStreamingPlan(StreamingPlan streamingPlan) {
         this.streamingPlan = streamingPlan;
+    }
+    public Profile getFirstProfile(){
+        return profiles.get(0);
     }
 }
