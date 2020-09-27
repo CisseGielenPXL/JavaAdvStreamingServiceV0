@@ -33,7 +33,7 @@ public class Profile {
         return age;
     }
 
-    public boolean allowedToWatchContent(Content content){
+    public boolean allowedToWatch(Content content){
         if (content.getMaturityRating().getMinLeeftijd() > getAge()){
             return false;
         }

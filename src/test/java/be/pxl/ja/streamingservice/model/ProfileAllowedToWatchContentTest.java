@@ -20,7 +20,7 @@ public class ProfileAllowedToWatchContentTest {
     public void ifNoDateOfBirthAlwaysFalse(){
         for (Rating rating:Rating.values()) {
             movie1 = new Movie("test",rating);
-            Assertions.assertFalse(profile.allowedToWatchContent(movie1));
+            Assertions.assertFalse(profile.allowedToWatch(movie1));
         }
     }
     @Test
@@ -31,10 +31,10 @@ public class ProfileAllowedToWatchContentTest {
         movie3 = new Movie("test",Rating.TEENS);
         movie4 = new Movie("test",Rating.MATURE);
 
-        Assertions.assertTrue(profile.allowedToWatchContent(movie1));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie2));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie3));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie4));
+        Assertions.assertTrue(profile.allowedToWatch(movie1));
+        Assertions.assertFalse(profile.allowedToWatch(movie2));
+        Assertions.assertFalse(profile.allowedToWatch(movie3));
+        Assertions.assertFalse(profile.allowedToWatch(movie4));
 
     }
     @Test
@@ -45,10 +45,10 @@ public class ProfileAllowedToWatchContentTest {
         movie3 = new Movie("test",Rating.TEENS);
         movie4 = new Movie("test",Rating.MATURE);
 
-        Assertions.assertTrue(profile.allowedToWatchContent(movie1));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie2));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie3));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie4));
+        Assertions.assertTrue(profile.allowedToWatch(movie1));
+        Assertions.assertTrue(profile.allowedToWatch(movie2));
+        Assertions.assertFalse(profile.allowedToWatch(movie3));
+        Assertions.assertFalse(profile.allowedToWatch(movie4));
 
     }
     @Test
@@ -59,10 +59,10 @@ public class ProfileAllowedToWatchContentTest {
         movie3 = new Movie("test",Rating.TEENS);
         movie4 = new Movie("test",Rating.MATURE);
 
-        Assertions.assertTrue(profile.allowedToWatchContent(movie1));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie2));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie3));
-        Assertions.assertFalse(profile.allowedToWatchContent(movie4));
+        Assertions.assertTrue(profile.allowedToWatch(movie1));
+        Assertions.assertTrue(profile.allowedToWatch(movie2));
+        Assertions.assertTrue(profile.allowedToWatch(movie3));
+        Assertions.assertFalse(profile.allowedToWatch(movie4));
 
     }
     @Test
@@ -73,10 +73,10 @@ public class ProfileAllowedToWatchContentTest {
         movie3 = new Movie("test",Rating.TEENS);
         movie4 = new Movie("test",Rating.MATURE);
 
-        Assertions.assertTrue(profile.allowedToWatchContent(movie1));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie2));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie3));
-        Assertions.assertTrue(profile.allowedToWatchContent(movie4));
+        Assertions.assertTrue(profile.allowedToWatch(movie1));
+        Assertions.assertTrue(profile.allowedToWatch(movie2));
+        Assertions.assertTrue(profile.allowedToWatch(movie3));
+        Assertions.assertTrue(profile.allowedToWatch(movie4));
 
     }
 }
